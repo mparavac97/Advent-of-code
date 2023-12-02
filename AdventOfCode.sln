@@ -4,8 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdventOfCode", "AdventOfCode\AdventOfCode.csproj", "{B3ECDB9A-5D1F-4300-B2C0-DCB8EDDEB0AB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3180AAE6-468D-43D1-9AFB-9199C4B4F923} = {3180AAE6-468D-43D1-9AFB-9199C4B4F923}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AOC.Helpers", "AOC.Helpers\AOC.Helpers.csproj", "{3180AAE6-468D-43D1-9AFB-9199C4B4F923}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AOC.Helpers", "AOC.Helpers\AOC.Helpers.csproj", "{3180AAE6-468D-43D1-9AFB-9199C4B4F923}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

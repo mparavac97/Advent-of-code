@@ -1,4 +1,5 @@
 ﻿using AdventOfCode.Day_1;
+using AdventOfCode.Day2;
 using AOC.Helpers.Contracts;
 using AOC.Helpers.Implementations;
 using Ninject;
@@ -17,7 +18,7 @@ namespace AdventOfCode
             IKernel kernel = new StandardKernel(new DIModule());
             try
             {
-                ITaskRunner runner = new TrebuchetTaskRunner(new FileReader());
+                ITaskRunner runner = new TrebuchetTask2Runner(new FileReader());
                 runner.Run();
             }
             catch (Exception ex) 

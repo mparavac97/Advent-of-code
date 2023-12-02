@@ -10,7 +10,7 @@ namespace AdventOfCode.Day_1
 {
     public class TrebuchetTaskRunner : ITaskRunner
     {
-        public IFileReader FileReader {  get; set; }
+        public IFileReader FileReader { get; set; }
 
         public TrebuchetTaskRunner(IFileReader fileReader)
         {
@@ -21,7 +21,7 @@ namespace AdventOfCode.Day_1
         {
             Console.WriteLine("Starting the trebuchet task...");
 
-            var calibration = FileReader.ReadCalibrationDocument();
+            var calibration = FileReader.ReadDocument(1000);
 
             var result = GetFirstAndLastDigitFromCalibration(calibration);
 
@@ -44,13 +44,11 @@ namespace AdventOfCode.Day_1
                 var firstDigit = digitString.First();
                 var lastDigit = digitString.Last();
 
-                
                 var sum = firstDigit.ToString() + lastDigit.ToString();
 
                 result.Add(Int32.Parse(sum));
                 Console.WriteLine($"Original: {calibration}; Result: {sum}.");
             }
-
 
             return result;
         }

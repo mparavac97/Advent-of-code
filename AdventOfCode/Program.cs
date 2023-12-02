@@ -19,14 +19,11 @@ namespace AdventOfCode
             {
                 ITaskRunner runner = new TrebuchetTaskRunner(new FileReader());
                 runner.Run();
-                //test commmebnt on master
             }
             catch (Exception ex) 
             {
                 Console.WriteLine(ex.Message);
                 Console.WriteLine(ex.StackTrace);
-                //this comment is a test for a test branch
-                //another test comment
             }
         }
     }

@@ -24,6 +24,7 @@ namespace AdventOfCode
             {
                 Console.WriteLine(ex.Message);
                 Console.WriteLine(ex.StackTrace);
+                //this comment is a test for a test branch
             }
         }
     }

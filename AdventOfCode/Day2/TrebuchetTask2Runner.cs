@@ -17,15 +17,15 @@ namespace AdventOfCode.Day2
 
         private Dictionary<string, string> wordToDigitMap = new Dictionary<string, string>
         {
-            {"1e", "one"},
-            {"2o", "two"},
-            {"3e", "three"},
-            {"4r", "four"},
-            {"5e", "five"},
-            {"6x", "six"},
-            {"7n", "seven" },
-            {"8t", "eight"},
-            {"9e", "nine"}
+            {"o1e", "one"},
+            {"t2o", "two"},
+            {"t3e", "three"},
+            {"f4r", "four"},
+            {"f5e", "five"},
+            {"s6x", "six"},
+            {"s7n", "seven" },
+            {"e8t", "eight"},
+            {"n9e", "nine"}
         };
 
         #endregion Private Fields
@@ -62,7 +62,7 @@ namespace AdventOfCode.Day2
         public IEnumerable<int> GetFirstAndLastDigitFromCalibration(IEnumerable<string> document)
         {
             List<int> result = new List<int>();
-
+            int i = 0;
             foreach (var calibration in document)
             {
                 var digitString = calibration.Where(Char.IsDigit);
@@ -72,7 +72,8 @@ namespace AdventOfCode.Day2
                 var sum = firstDigit.ToString() + lastDigit.ToString();
 
                 result.Add(Int32.Parse(sum));
-                Console.WriteLine($"Original: {calibration}; Result: {sum}.");
+                Console.WriteLine($"No. {i}: Original: {calibration}; Result: {sum}.");
+                i++;
             }
 
             return result;
@@ -96,8 +97,6 @@ namespace AdventOfCode.Day2
 
             var replacedStrings = GetAllDigitsFromDocument(calibration);
 
-            var contains = replacedStrings.Select(p => p.Contains("8l"));
-
             var result = GetFirstAndLastDigitFromCalibration(replacedStrings);
 
             int sum = 0;
@@ -110,22 +109,5 @@ namespace AdventOfCode.Day2
         }
 
         #endregion Public Methods
-
-        #region Public Classes
-
-        public class CalculationResult
-        {
-            #region Public Properties
-
-            public string Original { get; set; }
-
-            public string Replaced { get; set; }
-
-            public int Result { get; set; }
-
-            #endregion Public Properties
-        }
-
-        #endregion Public Classes
     }
 }

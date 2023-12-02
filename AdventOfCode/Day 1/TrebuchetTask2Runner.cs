@@ -93,7 +93,7 @@ namespace AdventOfCode.Day2
 
         public void Run()
         {
-            var calibration = FileReader.ReadCalibrationDocument();
+            var calibration = FileReader.ReadDocument(1000);
 
             var replacedStrings = GetAllDigitsFromDocument(calibration);
 

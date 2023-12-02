@@ -8,6 +8,8 @@ namespace AOC.Helpers.Contracts
 {
     public interface IFileReader
     {
-        string[] ReadCalibrationDocument();
+        string[] ReadDocument(int collectionSize);
+
+        IEnumerable<string> ReadDocumentAsList();
     }
 }
